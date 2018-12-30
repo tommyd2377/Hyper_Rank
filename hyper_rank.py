@@ -16,9 +16,9 @@ def hyper_rank(current_user, user_data, item_data):
     #add the user integer - 1 to the item_data integer
 
     #loop through items in tier_b and square the item integer
-    #loop through items in tier_c and cude the integer
+    #loop through items in tier_c and cube the item integer
 
     #rank item_data items by updated integer in descending order
     #return item_data as dictionary
 
-    return
+    return item_data

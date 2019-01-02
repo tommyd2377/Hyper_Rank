@@ -1,3 +1,7 @@
+from dataset import user
+from dataset import users
+from dataset import items
+
 def hyper_rank(current_user, user_data, item_data):
 
     tier_A = []
@@ -5,7 +9,16 @@ def hyper_rank(current_user, user_data, item_data):
     tier_C = []
 
     #loop through item_data and assign a temporary integer to item_data based on raw vote
+    for vote_list in item_data:
+        vote_list = item_data.votes
+        item_int = vote_list.length
+        item_data.append(item_int)
+        pass
+
     #rank items by number of votes in descending order
+    item_data = sorted(item_data)
+
+
     #push the top 25% of items into tier_A
     #push the middle 50% of items into tier_B
     #push the bottom 25% of items into tier_C
@@ -22,3 +35,5 @@ def hyper_rank(current_user, user_data, item_data):
     #return item_data as dictionary
 
     return item_data
+
+hyper_rank(user, users, items)

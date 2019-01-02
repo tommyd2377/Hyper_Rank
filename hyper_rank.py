@@ -1,6 +1,6 @@
-from dataset import user
-from dataset import users
-from dataset import items
+from dataset import user as cu
+from dataset import users as u
+from dataset import items as i
 
 def hyper_rank(current_user, user_data, item_data):
 
@@ -36,4 +36,4 @@ def hyper_rank(current_user, user_data, item_data):
 
     return item_data
 
-hyper_rank(user, users, items)
+hyper_rank(cu, u, i)

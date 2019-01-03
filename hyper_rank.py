@@ -18,10 +18,25 @@ def hyper_rank(current_user, user_data, item_data):
     #rank items by number of votes in descending order
     item_data = sorted(item_data)
 
-
-    #push the top 25% of items into tier_A
-    #push the middle 50% of items into tier_B
-    #push the bottom 25% of items into tier_C
+    item_data_quarter = item_data.length/4
+    item_count = 0
+   
+    for item in item_data:
+        #push the top 25% of items into tier_A
+        if item_count < item_data_quarter:
+            tier_A.append(item)
+            item_count = item_count + 1
+            pass
+        #push the bottom 25% of items into tier_C
+        if item_count > item_data_quarter * 3:
+            tier_C.append(item)
+            item_count = item_count + 1
+            pass
+        #push the middle 50% of items into tier_B
+        else:
+            tier_B.append(item)
+            item_count = item_count + 1
+            pass
 
     #identify the intersection of the current_user vote array to users_data vote array
     #assign a temporary integer to each user where an intersection exists

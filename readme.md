@@ -1,6 +1,10 @@
 # Hyper Rank
 
-The hyper rank function HR(CU, U, I) -> I'  can be defined as follows:
+Hyper Rank is user-user collaborative filtering algorithm that I have implemented here in Python. It is designed to 
+be extremeley robust even with small inputs so it is an excellent choice for applications with a small dataset. This is still
+a work in progress and I'm expolring an implementaion using TensorFlow. 
+
+The hyper rank function HR(CU, U, I) -> I' can be defined as follows:
 
 1. Loop through item_data(I) and assign a temporary integer to item_data based on raw vote
 2. Rank items by number of votes in descending order

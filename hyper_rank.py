@@ -11,7 +11,7 @@ def hyper_rank(current_user, user_data, item_data):
     #loop through item_data and assign a temporary integer to item_data based on raw vote
     for vote_list in item_data:
         vote_list = item_data.votes
-        item_int = vote_list.length
+        item_int = len(vote_list)
         item_data.append(item_int)
         pass
 

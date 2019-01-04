@@ -1,5 +1,3 @@
-# Hyper Rank
-
 ## Project Overview
 
 Hyper Rank is user-user collaborative filtering algorithm that I have implemented here in Python. It is designed to 

@@ -4,9 +4,9 @@ from dataset import items as i
 
 def hyper_rank(current_user, user_data, item_data):
 
-    tier_A = []
-    tier_B = []
-    tier_C = []
+    tier_A = set()
+    tier_B = set()
+    tier_C = set()
 
     #loop through item_data and assign a temporary integer to item_data based on raw vote
     for vote_list in item_data:
@@ -16,29 +16,32 @@ def hyper_rank(current_user, user_data, item_data):
         pass
 
     #rank items by number of votes in descending order
-    item_data = sorted(item_data)
+    for k, v in item_data.items():
+        pass
 
-    item_data_quarter = item_data.length/4
+    item_data_quarter = len(item_data) / 4
     item_count = 0
    
     for item in item_data:
         #push the top 25% of items into tier_A
         if item_count < item_data_quarter:
-            tier_A.append(item)
+            tier_A.add(item)
             item_count = item_count + 1
             pass
         #push the bottom 25% of items into tier_C
         if item_count > item_data_quarter * 3:
-            tier_C.append(item)
+            tier_C.add(item)
             item_count = item_count + 1
             pass
         #push the middle 50% of items into tier_B
         else:
-            tier_B.append(item)
+            tier_B.add(item)
             item_count = item_count + 1
             pass
 
     #identify the intersection of the current_user vote array to users_data vote array
+    current_user_votes = current_user.votes
+    
     #assign a temporary integer to each user where an intersection exists
     #loop through item_data votes array to check if any intersection uids exist
     #add the user integer - 1 to the item_data integer
@@ -51,4 +54,4 @@ def hyper_rank(current_user, user_data, item_data):
 
     return item_data
 
-hyper_rank(cu, u, i)
+print(hyper_rank(cu, u, i))

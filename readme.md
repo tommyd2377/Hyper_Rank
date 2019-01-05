@@ -8,19 +8,23 @@ a work in progress and I'm expolring an implementaion using TensorFlow.
 
 The hyper rank function HR(CU, U, I) -> I' can be defined as follows:
 
-1. Loop through item_data(I) and assign a temporary integer to item_data based on raw vote
-2. Rank items by number of votes in descending order
+1. Loop through item_data(I) and assign a temporary integer(item_int) to item_data based on vote count
+2. Rank items by item_int in descending order
 3. Push the top 25% of items into tier_A
 4. Push the middle 50% of items into tier_B
 5. Push the bottom 25% of items into tier_C
-6. Identify the intersection of the current_user(CU) vote array to users_data(U) vote array
-7. Assign a temporary integer to each user where an intersection exists
-8. Loop through item_data votes array to check if any intersection uids exist
-9. Add the user integer - 1 to the item_data integer
-10. Loop through items in tier_b and square the item integer
-11. Loop through items in tier_c and cube the item integer
-12. Rank item_data items by updated integer in descending order
-13. Return item_data(I') as dictionary
+6. Identify the intersection of the current_user(CU) vote array to user_data(U) vote arrays
+7. Assign a temporary integer(user_user_int) to each user where an intersection exists
+8. Loop through item_data votes array to check if any intersection(user_item_int) with user_user_int exists
+9. If intersection exists, loop through user_item_int
+10. Subtract the number of user_item_int from the item_int
+11. Multiply the items user_item_int by the user_user_int
+12. Add the result of step 9 to the result of step 10
+13. Log the result of step 11 
+14. Loop through items in tier_b and square the item integer
+15. Loop through items in tier_c and cube the item integer
+16. Rank item_data items by updated integer in descending order
+17. Return item_data(I') as dictionary
 
 ## Set Partition
 

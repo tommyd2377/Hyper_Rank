@@ -9,19 +9,19 @@ def hyper_rank(current_user, user_data, item_data):
     tier_C = set()
 
     #loop through item_data and assign a temporary integer to item_data based on raw vote
-    for vote_list in item_data:
-        vote_list = item_data.votes
-        item_int = len(vote_list)
-        item_data.append(item_int)
+    for items in item_data:
+        votes = items.votes
+        item_int = len(votes)
+        items.item_int = item_int
         pass
 
     #rank items by number of votes in descending order
-    for k, v in item_data.items():
-        pass
+    item_data = sorted(item_data, 'votes', True)
 
+    #tier items
     item_data_quarter = len(item_data) / 4
     item_count = 0
-   
+
     for item in item_data:
         #push the top 25% of items into tier_A
         if item_count < item_data_quarter:
@@ -29,7 +29,7 @@ def hyper_rank(current_user, user_data, item_data):
             item_count = item_count + 1
             pass
         #push the bottom 25% of items into tier_C
-        if item_count > item_data_quarter * 3:
+        elif item_count > item_data_quarter * 3:
             tier_C.add(item)
             item_count = item_count + 1
             pass

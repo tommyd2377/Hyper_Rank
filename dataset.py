@@ -1,12 +1,12 @@
-user = set({
+user = {
     'uid': 'u4',
-    'votes': ['i95', 'i2', 'i379']
-})
+    'votes': set({'i95', 'i2', 'i379'})
+}
 
-users = {
+users = [
     {
     'uid': 'u1',
-    'votes': ['i1', 'i2', 'i3']
+    'votes': set({'i1', 'i2', 'i3'}),
     },
     {
     'uid': 'u2',
@@ -24,12 +24,12 @@ users = {
     'uid': 'u5',
     'votes': ['i91', 'i2', 'i39']
     }
-}
+]
 
-items = {
+items = [
     {
     'id': 'i1',
-    'votes': ['u1', 'u2', 'u3'],
+    'votes': set({'u1', 'u2', 'u3'}),
     },
     {
     'id': 'i2',
@@ -51,4 +51,4 @@ items = {
     'id': 'i6',
     'votes': ['u61', 'u2', 'u3']
     }
-}
+]

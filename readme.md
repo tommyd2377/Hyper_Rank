@@ -1,7 +1,7 @@
 ## Project Overview
 
 Hyper Rank is user-user collaborative filtering algorithm that I have implemented here in Python. It is designed to 
-be extremeley robust even with small inputs so it is an excellent choice for applications with a small dataset. This is still
+be extremely robust even with small inputs so it is an excellent choice for applications with a small dataset. This is still
 a work in progress and I'm expolring an implementaion using TensorFlow. 
 
 ## Hyper Rank Function

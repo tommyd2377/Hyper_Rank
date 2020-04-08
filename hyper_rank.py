@@ -44,6 +44,7 @@ def hyper_rank(current_user, user_data, item_data):
     user_votes = user_data.votes
     vote_intersection = current_user_votes.intersection(user_votes)
 
+
     #assign a temporary integer to each user where an intersection exists
     #loop through item_data votes array to check if any intersection uids exist
     #add the user integer - 1 to the item_data integer
@@ -54,4 +55,4 @@ def hyper_rank(current_user, user_data, item_data):
     #rank item_data items by updated integer in descending order
     #return item_data as dictionary
 
-print(hyper_rank(cu, u, i))
+hyper_rank(cu, u, i)

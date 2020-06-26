@@ -19,8 +19,8 @@ The hyper rank function HR(CU, U, I) -> I' can be defined as follows:
 9. If intersection exists, loop through user_item_int
 10. Subtract the number of user_item_int from the item_int
 11. Multiply the items user_item_int by the user_user_int
-12. Add the result of step 9 to the result of step 10
-13. Log the result of step 11 
+12. Add the result of step 10 to the result of step 11
+13. Log the result of step 12
 14. Loop through items in tier_b and square the item integer
 15. Loop through items in tier_c and cube the item integer
 16. Rank item_data items by updated integer in descending order

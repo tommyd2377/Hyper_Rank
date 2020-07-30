@@ -12,13 +12,17 @@ class HyperRank():
 
         #loop through item_data and assign a temporary integer to item_data based on raw vote
         for item in item_data:
-            print("item: ", item["votes"])
             votes = item["votes"]
+            print("item: ", item)
             item_int = len(votes)
+            print(item_int)
             item["item_int"] = item_int
+            print("item: ", item)
 
         #rank items by number of votes in descending order
-        item_data = sorted(item_data, 'votes', True)
+        print(item_data)
+        item_data = sorted(item_data)
+        print(item_data)
 
         #tier items
         item_data_quarter = len(item_data) / 4

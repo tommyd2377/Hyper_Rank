@@ -6,7 +6,16 @@ a work in progress and I'm expolring an implementaion using TensorFlow.
 
 ## Hyper Rank Function
 
-The hyper rank function HR(CU, U, I) -> I' can be defined as follows:
+This is the mathematical notaion:
+
+![](http://www.sciweavers.org/tex2img.php?eq=hr%28%20%5Cchi%20%29%20%3D%20log%5Csum_%7BU%20%5Ckappa%20%20%5Cepsilon%20U%7D%5E%7BUn%7D%20%28%28%7BCU%7D%20%7B%5Cbigcap_%7D%20%7BU%20%5Ckappa%20%7D%29%20%5CRe%20%29Un&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
+where
+ 
+![](http://www.sciweavers.org/tex2img.php?eq=%20%5Cchi%20%20%5Cepsilon%20%5Cbig%5C%7BTA%5Cbig%5C%20%7B%5Cbigvee_%7D%20%7BTB%5E%7B2%7D%7D%20%5Cbig%5C%20%5Cbigvee_%7D%20TC%5E%7B3%7D%5Cbig%5C%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+
+
+The hyper_rank function in Python HR(CU, U, I) -> I' can be defined as follows:
 
 1. Loop through item_data(I) and assign a temporary integer(item_int) to item_data based on vote count
 2. Rank items by item_int in descending order

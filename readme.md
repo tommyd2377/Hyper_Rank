@@ -1,8 +1,8 @@
 ## Project Overview
 
-Hyper Rank is a user-user collaborative filtering algorithm that I have implemented here in Python.
+HyperRank is a user-user collaborative filtering algorithm that I have designed for use as a simple recommendation engine and have implemented here in Python.
 
-## Hyper Rank Function
+## HyperRank Function
 
 Mathematically can be written as:
 
@@ -10,7 +10,7 @@ Mathematically can be written as:
 
 where
  
-![](https://latex.codecogs.com/svg.image?{X\varepsilon&space;\left\{TA&space;\vee&space;TB^{2}\vee&space;TC^{3}&space;\right\})
+![](https://latex.codecogs.com/svg.image?{X\varepsilon&space;\{TA&space;\vee&space;TB^{2}\vee&space;TC^{3}&space;\})
 
 ### Given a set of users and items, represented as user_data and item_data respectively, we can calculate a numerical ranking score for each item using the HyperRank algorithm.
 The HyperRank algorithm involves the following steps:

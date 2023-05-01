@@ -78,5 +78,8 @@ item_data = [
     {"item_id": "item5", "votes": ["user2", "user4"]},
     {"item_id": "item6", "votes": ["user3", "user4", "user5"]}
 ]
+
+# call the hyper_rank() function and store the result in the variable ranked_items
 ranked_items = hr.hyper_rank(current_user, user_data, item_data)
+# print the ranked_items to the console
 print(ranked_items)
